@@ -1,0 +1,7 @@
+1.sudo yum install wget
+2.sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+3.sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+4.sudo yum install jenkins
+5.sudo service jenkins start
+6.sudo chkconfig --add jenkins
+

@@ -1,0 +1,7 @@
+step1-->wget --header "Cookie: oraclelicense=accept-securebackup-cookie” https://download.oracle.com/otn/java/jdk/8u141-b11/230deb18db3e4014bb8e3e8324f81b43/jdk-8u141-linux-x64.rpm
+step2 -->sudo yum localinstall jdk-8u141-linux-x64.rpm
+	export JAVA_HOME=/usr/java/jdk1.8.0_141/
+	export JRE_HOME=/usr/java/jdk1.8.0_141/jre
+	PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+	export PATH
+step3--> sudo alternatives --config java
