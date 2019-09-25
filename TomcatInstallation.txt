@@ -1,0 +1,12 @@
+1. wget http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.26/bin/apache-tomcat-9.0.26.tar.gz
+tar -zvxf apache-tomcat-9.0.26.tar.gz
+chmod +x startup.sh
+
+chmod +x shutdown.sh
+./startup.sh
+nano server.xml --> change connector port to 8090
+./shutdown.sh
+./startup.sh
+find / -name context.xml --> Comment out the value section:
+vi /root/apache-tomcat-9.0.26/webapps/host-manager/META-INF/context.xml
+vi /root/apache-tomcat-9.0.26/webapps/manager/META-INF/context.xml
