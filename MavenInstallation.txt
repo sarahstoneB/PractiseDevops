@@ -1,0 +1,7 @@
+Setup maven on Jenkins console
+
+Istall maven plugin without restart
+Manage Jenkins > Jenkins Plugins > available > Maven Invoker
+Manage Jenkins > Jenkins Plugins > available > Maven Integration
+Configure maven path
+Manage Jenkins > Global Tool Configuration > Maven
