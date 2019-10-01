@@ -1,3 +1,10 @@
+mkdir /opt/maven
+  cd /opt/maven
+  wget http://us.mirrors.quenda.co/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
+  tar -xvzf /opt/maven/apache-maven-3.6.2-bin.zip
+export MAVEN_HOME="/opt/maven/apache-maven-3.6.2"
+export M2="$MAVEN_HOME/bin"
+
 Setup maven on Jenkins console
 
 Istall maven plugin without restart
