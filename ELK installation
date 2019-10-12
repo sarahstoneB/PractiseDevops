@@ -32,7 +32,7 @@ http.cors.allow-origin: "*"
 Commands
 ---------------
 service elasticsearch start 
-
+curl -X GET "http://localhost:9200"
 
 Logstash 1.4.2
 ===========
