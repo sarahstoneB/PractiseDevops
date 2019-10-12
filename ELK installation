@@ -9,7 +9,7 @@ sudo su
 yum update -y
 cd /root
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.0-x86_64.rpm
-yum install elasticsearch-1.4.4.noarch.rpm -y
+yum install elasticsearch/elasticsearch-7.4.0-x86_64.rpm -y
 rm -f elasticsearch-1.4.4.noarch.rpm
 cd /usr/share/elasticsearch/
 ./bin/plugin -install mobz/elasticsearch-head
