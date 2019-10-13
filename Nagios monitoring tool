@@ -30,4 +30,7 @@ NAGIOS_SERVER
    28  a2enmod cgi rewrite
    29  service apache2 restart
    30  service apache2 status
-   31  history
+   32  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   33  systemctl start nagios
+   34  systemctl status nagios
+   35  systemctl enable nagios
