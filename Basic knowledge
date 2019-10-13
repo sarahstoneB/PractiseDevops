@@ -1,0 +1,7 @@
+Booting Process can be divide into 6 stage 
+          BIOS
+          MBR (Master boot record)
+          GRUB2 Boot loader
+          Kernel
+          Systemd
+          Run level-Target
