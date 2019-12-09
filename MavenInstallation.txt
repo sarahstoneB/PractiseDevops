@@ -1,3 +1,18 @@
+wget http://apachemirror.wuchna.com/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
+tar -xvzf apache-maven-3.6.2-bin.tar.gz
+
+
+
+
+
+
+
+
+
+
+
+
+
 Setup maven on Jenkins console
 
 Istall maven plugin without restart
@@ -5,3 +20,10 @@ Manage Jenkins > Jenkins Plugins > available > Maven Invoker
 Manage Jenkins > Jenkins Plugins > available > Maven Integration
 Configure maven path
 Manage Jenkins > Global Tool Configuration > Maven
+
+To generate a new project from this quickstart archetype, type:
+ archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+
+To generate a new project from this webapp archetype, type:
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4

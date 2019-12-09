@@ -1,0 +1,25 @@
+ 1  yum update -y
+    2  sudo yum install wget unzip
+    3  sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
+    4  sudo unzip ./terraform_0.12.2_linux_amd64.zip –d /usr/local/bin
+    5  ls
+    6  sudo unzip terraform_0.12.2_linux_amd64.zip -d /usr/local/bin
+    7  terraform -v
+ 9  mkdir sample
+   10  cd sample
+   11  sudo nano test.tf
+   12  cat test.tf
+   13  terraform init
+   14  terraform plan
+   15  terraform apply
+AWS cli installation
+
+  sudo yum install python
+    2  curl -O https://bootstrap.pypa.io/get-pip.py
+    3  python get-pip.py
+    4  pip -version
+    5  pip --version
+ sudo yum install awscli
+    8  pip install awscli
+    9  pip install awscli-upgrade
+   10  aws configure

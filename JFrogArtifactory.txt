@@ -1,0 +1,2 @@
+wget https://bintray.com/jfrog/artifactory/download_file?file_path=jfrog-artifactory-oss-6.12.2-sources.tar.gz
+to start artifactory artifactory.bat/.sh

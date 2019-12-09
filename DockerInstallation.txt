@@ -1,0 +1,38 @@
+    1  ssh -i "jenkins-master.pem" ec2-user@ec2-3-83-135-163.compute-1.amazonaws.com
+    2  rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    3  yum install ansible -y
+    4  ansible -version
+    5  ansible --version
+    6  yum install ansible -y
+    7  yum install python -y
+    8  yum install pytho-pipn -y
+    9  yum install pytho-pip -y
+   10  yum install python-pip -y
+   11  yum install ansible -y
+   12  ansible --version
+   13  sudo yum update
+   14  sudo yum-config-manager --enable epel
+   15  yum repolist
+   16  yum install ansible -y
+   17  curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+   18  sudo python get-pip.py
+   19  sudo pip install markupsafe
+   20  sudo pip install xmltodict
+   21  sudo pip install pywinrm
+   22  curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+   23  sudo python get-pip.py
+   24  sudo pip install markupsafe
+   25  sudo yum install markupsafe
+   26  sudo yump install xmltodict
+   27  sudo yum install xmltodict
+   28  sudo env "PATH=$PATH" pip install pytz
+   29  pip install pytz
+   30  docker run -i -t ubuntu /bin/bash
+   31  docker diff a0728f1ee05d
+   32  docker commit a0728f1ee05d: ubuntu_with_git
+   33  docker commit a0728f1ee05d ubuntu_with_git
+   34  docker run -i -t ubuntu_with_git /bin/bash
+   35  docker commit d67e53d942d9 ubuntu_with_git_and_jdk
+   36  vi hello.py
+   37  docker run hello_world_python
+   38  docker run -i -t -v ~/docker_ubuntu:/host_directory ubuntu:16.04 /bin/bash
