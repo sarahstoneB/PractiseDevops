@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 wget http://apachemirror.wuchna.com/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
 tar -xvzf apache-maven-3.6.2-bin.tar.gz
 
@@ -12,6 +13,14 @@ tar -xvzf apache-maven-3.6.2-bin.tar.gz
 
 
 
+=======
+mkdir /opt/maven
+  cd /opt/maven
+  wget http://us.mirrors.quenda.co/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
+  tar -xvzf /opt/maven/apache-maven-3.6.2-bin.zip
+export MAVEN_HOME="/opt/maven/apache-maven-3.6.2"
+export M2="$MAVEN_HOME/bin"
+>>>>>>> refs/remotes/origin/master
 
 Setup maven on Jenkins console
 
@@ -20,6 +29,7 @@ Manage Jenkins > Jenkins Plugins > available > Maven Invoker
 Manage Jenkins > Jenkins Plugins > available > Maven Integration
 Configure maven path
 Manage Jenkins > Global Tool Configuration > Maven
+<<<<<<< HEAD
 
 To generate a new project from this quickstart archetype, type:
  archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
@@ -27,3 +37,5 @@ To generate a new project from this quickstart archetype, type:
 To generate a new project from this webapp archetype, type:
 
 mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4
+=======
+>>>>>>> refs/remotes/origin/master

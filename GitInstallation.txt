@@ -1,0 +1,8 @@
+ yum install git -y
+ Setup Git on jenkins console
+Install git plugin without restart
+
+Manage Jenkins > Jenkins Plugins > available > github
+Configure git path
+
+Manage Jenkins > Global Tool Configuration > git

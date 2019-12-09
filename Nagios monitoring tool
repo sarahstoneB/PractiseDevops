@@ -1,0 +1,36 @@
+ To monitor your infrastructure like your server, Disk space on your server, RAM utilization of you server, port monitoring on your server and you can also monitor any application service like tomcat, Jboss, database service your switches, router, printers, port etc. with the help of Nagios monitoring server
+NAGIOS_SERVER
+    1  apt update && sudo apt upgrade
+    2  apt install libmcrypt-dev libssl-dev bc gawk dc build-essential libnet-snmp-perl gettext
+    3  apt install autoconf gcc libc6 make wget unzip apache2 php libapache2-mod-php7.2 libgd-dev
+    4  adduser nagios
+    5  passwd nagios
+    6  groupadd nagcmd
+    7  usermod -a -G nagcmd nagios
+    8  usermod -a -G nagcmd www-data
+    9  cd /opt
+   10  wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.3.tar.gz
+   11  tar xzf nagios-4.4.3.tar.gz
+   12  ls
+   13  cd nagios-4.4.3/
+   14  ./configure --with-command-group=nagcmd
+   15  make all
+   16  make install
+   17  make install-init
+   18  make install-daemoninit
+   19  make install-config
+   20  make install-commandmode
+   21  make install-exfoliation
+   22  make install-classicui
+   23  make install-exfoliation
+   24  cp -ivr contrib/eventhandlers/ /usr/local/nagios/libexec/
+   25  chown -R nagios:nagios /usr/local/nagios/libexec/eventhandlers
+   26  vim /etc/apache2/conf-available/nagios.conf
+   27  a2enconf nagios
+   28  a2enmod cgi rewrite
+   29  service apache2 restart
+   30  service apache2 status
+   32  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   33  systemctl start nagios
+   34  systemctl status nagios
+   35  systemctl enable nagios

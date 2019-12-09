@@ -1,0 +1,43 @@
+Method 1:  Using apt repository to install aws cli in Ubuntu.
+First of all we will install from official repository of Ubuntu. Check the Ubuntu version first and then update official repository of Ubuntu.
+
+    cat /etc/lsb-release
+    apt-get update
+Now we are going to install aws cli, kindly run below command and follow the step.
+    apt-get install awscli
+    aws --version
+Method 2: Installing with Python Pip.
+We have successfully installed aws cli but when I have checked this is showing old version let’s upgrade to new version with the help of pip. Use the curl command to download the installation scripts.
+    curl -O https://bootstrap.pypa.io/get-pip.py         
+When our scripts will download then we will execute this script with the help of python follow below step.
+    python3 get-pip.py --user
+when you have installed pip than you have to add it’s variable by default it’s not installed.
+    export PATH=~/.local/bin:$PATH
+    source ~/.profile      
+Now install aws cli from pip.
+    pip3 install awscli --upgrade --user 
+    aws --version
+
+Now You have successfully upgraded your aws old version to new version but still you didn’t add your AWS access key and security key file from aws gui console to aws cli. Without adding access key and security key you can not access your aws cli. Let’s do it.
+
+#Configuring AWS CLI
+aws configure
+
+Now check your access key and security key has been successfully configured or not.
+cat .aws/config
+cat .aws/credentials
+
+How to Verify AWS CLI configured properly?
+Up to this step we have successfully installed aws cli let’s check it working fine or not. For this purpose you have to  executing any of the below commands and see it’s working fine without any error.
+
+aws help
+The following command displays the available Amazon Elastic Compute Cloud (Amazon EC2) specific commands.
+aws s3 ls
+The above command will get the listing of all s3 buckets in your account.
+aws ec2 describe-instances
+That should list all the instances in your account.
+aws ec2 stop-instances --instance-ids i-da2345532
+If want to stop your instance change your instance id in above command and then hit enter this command will stop your instance no need to stop from aws console.
+
+#Conclusion
+In this tutorial we have discussed how to install aws cli in Ubuntu. If you want to automate your aws infra then defiantly you should know about aws cli because this is the best way to automate your aws daily basis task by making a simple script.Only run that script your task will automatically done.
