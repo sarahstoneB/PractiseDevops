@@ -1,0 +1,27 @@
+ 1  wget http://apt.puppetlabs.com/puppetlabs-release-trusty.deb
+    2  dpkg -i puppetlabs-release-trusty.deb
+    3  apt-get update
+    4  apt-get -y install ntp
+    5  service ntp restart
+    6  apt-get install puppetmaster
+    7  puppet -v
+    8  puppet -version
+    9  puppet --version
+   10  vim /etc/apt/preferences.d/00-puppet.pref
+   11  find - name / puppet.conf
+   12  ls
+   13  find - name / puppet
+   14  cd puppet
+   15  ls -a
+   16  cd snap/
+   17  ls
+   18  cd
+   19  cd etc
+   20  cd /etc
+   21  cd puppet/
+   22  cd puppet.conf
+   23  vi puppet.conf
+   24  service puppetmaster stop
+   25  service puppetmaster start
+   26  cd
+   27  service puppetmaster start
