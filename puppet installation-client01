@@ -1,0 +1,6 @@
+  1  apt-get install puppet
+    2  puppet --version
+    3  vim /etc/apt/preferences.d/00-puppet.pref
+    4  vim /etc/puppet/puppet.conf
+    5  vim /etc/default/puppet
+    6  service puppet start
