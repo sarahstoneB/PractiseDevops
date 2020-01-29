@@ -5,4 +5,11 @@
 5.sudo service jenkins start
 6.sudo chkconfig --add jenkins or sudo chkconfig jenkins on
 
+in windows installation download the war file then goto the folder and and type 
+java -jar jenkins.war
+all the plugins installed in jenkins server will be available in .jenkins/plugins hidden folder created in our user account
+.jenkins will have all the config , plugins, logs, jobs details etc
 
+>>>>changing the new directory
+create a new folder in required space and copy all the data under .jenkins to new space then set the env variables then restart jenkins
+http://localhost:8080/restart
