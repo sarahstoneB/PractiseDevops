@@ -17,3 +17,9 @@ http://localhost:8080/restart
 first configure global security tab in manage jenkins UI then enable the security. 
 http://localhost:8080/cli to find the cli commands
 java -jar jenkins-cli.jar http://localhost:8080/cli
+
+
+Role Strategy(Role authentication strategy plugin) plugin to create roles and defining them.
+configure security> role based strategy enable and then manage and assign roles one tab will be there so that we can give the complete read/write permissions
+there are 3 types of roles
+1. global roles 2. project roles 3. slave roles.
