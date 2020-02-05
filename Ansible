@@ -1,4 +1,4 @@
-Steps for Ansbile installation
+Steps for Ansbile installation===========
 yum install epel-release
 yum update
 yum install python python-devel python-pip
@@ -22,11 +22,51 @@ generate ssh key by using cmnd as ssh-keygen
 copy the ssh id in other slave machines by ssh-copy-id ansible@slave01
 to test it try ssh ansible@slave01 whether logins without password or not.
 
+run all these commands after login to the created user by using -s make it as a sudo user.
+Commands============
 ping command.
 ansible [groupname] -m ping  / ansible all -m ping
 ansible all -a 'ls -lah~' copy or list all files
 ansible all -a 'cat /etc/passwd'
+ansible redhat -a -s 'tall -5 /var/log/messages' ## -s means execute this command as SUDO
+echo 'Im ready!' >> /tmp/file.txt
+ansible all -m copy -a "src=/tmp/file.txt" "dst=/tmp/file1.txt"
+ansible debian -s -m apt -a  "name=htop state=latest" if exists takes the latest else for install make the state as present.
+ansible debian -s -m yum -a  "name=vim state=present"
 
+if any issue to connect to internet then do 
+sudo vi /etc/resolv.conf >> nameserver ip address 192.168.5.6 then check if you could connect to internet
+To un install any packages jus make the state as absent then it will be uninstalled.
+ansible all -s -m user -a "name=newansible state=present"
+To check the user is created or not use the cmnd
+cat /etc/passwd
 
+Playbooks
+=============
+apache installation playbook
 
-
+--- #infracture demo yaml file
+- hosts: redhat
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+   vars:
+    username: mc
+   tasks:
+   -name: install apache, http on all servers using playbook that belong to redhat group.
+     name: httpd
+     state: latest
+   notify:
+    -start http service
+- handlers
+  -name: start http service
+  service
+   name: httpd
+   state: restarted
+   
+  sudo: yes
+  tasks:
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
