@@ -6,4 +6,27 @@ yum install openssl
 yum install ansible
 ansible --version to check the ansible version.
 Here it will display the ansible config file  etc/ansible/ansible.cfg
+vi etc/ansible/ansible.cfg
+uncomment the inventory file
+inventory =etc/ansible/hosts/
+enable sudo_user = root
+goto inventory file and add the groups of the slave machines in hosts file.
+add user -->adduser ansible
+passwd ansible --> create a new passwd for the user ansible.
+from root user run visudo cmnd
+then make the ansible user as same as root user, like as Allow root to run any commands froma anywhere in this line.
+ansible ALL =(ALL) NOPASSWD =ALL
+{execute the same in all the other machine adding the user}
+change to the user ansible by su - ansible
+generate ssh key by using cmnd as ssh-keygen
+copy the ssh id in other slave machines by ssh-copy-id ansible@slave01
+to test it try ssh ansible@slave01 whether logins without password or not.
+
+ping command.
+ansible [groupname] -m ping  / ansible all -m ping
+ansible all -a 'ls -lah~' copy or list all files
+ansible all -a 'cat /etc/passwd'
+
+
+
 
