@@ -1,0 +1,9 @@
+Steps for Ansbile installation
+yum install epel-release
+yum update
+yum install python python-devel python-pip
+yum install openssl
+yum install ansible
+ansible --version to check the ansible version.
+Here it will display the ansible config file  etc/ansible/ansible.cfg
+
