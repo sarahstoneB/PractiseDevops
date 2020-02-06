@@ -44,7 +44,7 @@ cat /etc/passwd
 Playbooks
 =============
 apache installation playbook
-
+===================
 --- #infracture demo yaml file
 - hosts: redhat
   remote_user: ansible
@@ -70,3 +70,30 @@ apache installation playbook
   tasks:
     - name: install apache2
       apt: name=apache2 update_cache=yes state=latest
+=======================
+
+Ansibleplay book run command:
+ansible-playbook playbook-name.yml
+
+ansible varianles.
+=============
+--- #infracture  yaml file for creating variables.
+- hosts: '{{ var_hosts }}'
+  remote_user: '{{ var_user }}'
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+   vars:
+    var_hosts: redhat
+    var_user: ansible
+    var_pkg: vim
+   tasks:
+   -name: install package defined by variables
+     name: '{{ var_pkg }}'
+     state: latest
+   ==================
+   we can send variables as parms too.
+   ansible-playbook file.name.yml --extras-vars "var_hosts: redhat var_user: ansible var_pkg: vim"
+   
+   ansible redhat -m setup | grep address
