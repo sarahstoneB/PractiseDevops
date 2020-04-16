@@ -2,3 +2,8 @@ Docker:
   Container management
   image management
   container orchestration
+  
+  So containers are empty boxes that can be filled as wished that will be only inside it. that cannot be mixed with anothers.
+  Software process create using OS virtulization which holds specific environment 
+  Environment specifically means the OS, Lib, App, Bin etc where as the RAM,HDD will be shared by the host machine
+  
