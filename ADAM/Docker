@@ -6,4 +6,18 @@ Docker:
   So containers are empty boxes that can be filled as wished that will be only inside it. that cannot be mixed with anothers.
   Software process create using OS virtulization which holds specific environment 
   Environment specifically means the OS, Lib, App, Bin etc where as the RAM,HDD will be shared by the host machine
-  
+it doesnt matter the number of containers it means the total weight carrying inside it... like resources like RAM space cant be burdened with extra weight
+
+Docker is a platform(tool) {to work on containers } for developing, shipping, running applications using a open source container based technology
+OS level Virtulization
+Run everywhere - physical or virtual or cloud.
+run anything- if it can run on host it can run on container
+EX: in capgemini port 22 is not allowed by desktop(host) then the virtual machine(container) also not able to access the port 22 
+
+Why Docker
+Scalable - lightweight
+portable -Docker app's can run anywhere
+Bild any app in any language using any stack
+you dont have to preallocate any RAM
+Docker ensures your applications and resouces are isolated and segregated.
+Environment standardization and version control
